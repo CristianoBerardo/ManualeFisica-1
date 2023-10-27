@@ -1,0 +1,63 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{caption}
+
+%link in latex
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={ManualeFisicaIBerardoCristiano},
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+
+\usepackage{afterpage}
+\usepackage[T1]{fontenc} % codifica dei font
+\usepackage[utf8]{inputenc} % lettere accentate da tastiera
+\usepackage[italian]{babel} % lingua del documento
+\usepackage{url} 
+\usepackage{quoting}
+\usepackage{xspace}% per lo spazio intelligente
+\usepackage{titlesec} % per formato custom dei titoli dei capitoli
+\usepackage{tcolorbox}%per i box
+
+\input{comandiPerGraficiTikz}
+\input{newCommand}
+
+
+\begin{document}
+
+\input{PaginaIniziale}
+\afterpage{\blankpage}
+
+\input{introduzione}
+
+\begin{quoting}
+   " Nessuna quantità di esperimenti potrà dimostrare che ho \\ragione; un unico esperimento potrà dimostrare che ho sbagliato."\\
+    
+    (Albert Einstein, lettera a Max Born del 5 dicembre 1926)
+\end{quoting}
+
+\tableofcontents
+
+\clearpage
+
+\input{Meccanica}
+
+\newpage 
+\ 
+\newpage
+
+\input{elettromagnetismo}
+
+\afterpage{\blankpage}
+\afterpage{\blankpage}
+
+\input{bibliografia}
+
+\afterpage{\blankpage}
+\end{document}

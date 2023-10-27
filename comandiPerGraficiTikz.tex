@@ -1,0 +1,1033 @@
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{sidecap}
+\usepackage{amsmath}
+\usepackage{pgfplots}   % per i grafici
+\pgfplotsset{width=7cm,compat=1.9}
+\usepackage{booktabs}
+\usepackage{amssymb}
+
+
+
+
+
+%disegni
+\usepackage{tikz}
+\usetikzlibrary{patterns, shapes.geometric}
+\usepackage{physics}
+\usepackage{ifthen}
+\usepackage{tikz}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc} % for pic
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{patterns}
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.2pt}
+
+\colorlet{myred}{red!65!black}
+\tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
+                    fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\tikzstyle{mass}=[line width=0.6,red!30!black,fill=red!40!black!10,rounded corners=1,
+                  top color=red!40!black!20,bottom color=red!40!black!10,shading angle=20]
+\tikzstyle{rope}=[brown!70!black,line width=1.2,line cap=round] %very thick
+
+% FORCES SWITCH
+\tikzstyle{force}=[->,myred,thick,line cap=round]
+\tikzstyle{Fproj}=[force,myred!40]
+\newcommand{\vbF}{\vb{F}}
+\newboolean{showforces}
+\setboolean{showforces}{true}
+
+
+
+
+%prodotto scalare 
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{physics}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{angles,quotes} % for pic
+\contourlength{1.2pt}
+
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{veccol}{green!70!black}
+\colorlet{vcol}{green!70!black}
+\colorlet{xcol}{blue!85!black}
+\colorlet{projcol}{xcol!60}
+\colorlet{unitcol}{xcol!60!black!85}
+\colorlet{myblue}{blue!70!black}
+\colorlet{myred}{red!90!black}
+\colorlet{mypurple}{blue!50!red!80!black!80}
+\tikzstyle{vector}=[->,very thick,xcol]
+
+
+%integrale lavoro
+\usetikzlibrary{calc} % for pic
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{patterns}
+\usetikzlibrary{angles,quotes} % for pic
+\tikzset{>=latex} % for LaTeX arrow head
+
+\colorlet{myred}{red!65!black}
+%\colorlet{mylightblue}{blue!20}
+\colorlet{mydarkblue}{blue!30!black}
+\colorlet{xcol}{blue!70!black}
+\colorlet{vcol}{green!70!black}
+\colorlet{acol}{red!50!blue!80!black!80}
+\tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
+                    fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\tikzstyle{mass}=[line width=0.6,red!30!black,fill=red!40!black!10,rounded corners=1,
+                  top color=red!40!black!20,bottom color=red!40!black!10,shading angle=20]
+\tikzstyle{vector}=[->,very thick,xcol,line cap=round]
+\tikzstyle{force}=[->,myred,thick,line cap=round]
+\tikzstyle{Fproj}=[force,myred!40]
+\tikzstyle{mydashed}=[dash pattern=on 2pt off 2pt]
+\tikzstyle{smallarrow}=[{Latex[length=2,width=2]}-{Latex[length=2,width=2]}]
+\def\tick#1#2{\draw[thick] (#1) ++ (#2:0.1) --++ (#2-180:0.2)} %0.03*\xmax
+
+
+%molle
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{patterns,snakes}
+\usetikzlibrary{arrows.meta} % for arrow size
+\contourlength{0.4pt}
+
+\colorlet{xcol}{blue!70!black}
+\colorlet{darkblue}{blue!40!black}
+\colorlet{myred}{red!65!black}
+\tikzstyle{mydashed}=[xcol,dashed,line width=0.25,dash pattern=on 2.2pt off 2.2pt]
+\tikzstyle{axis}=[->,thick] %line width=0.6
+\tikzstyle{ell}=[{Latex[length=3.3,width=2.2]}-{Latex[length=3.3,width=2.2]},line width=0.3]
+\tikzstyle{dx}=[-{Latex[length=3.3,width=2.2]},darkblue,line width=0.3]
+\tikzstyle{ground}=[preaction={fill,top color=black!10,bottom color=black!5,shading angle=20},
+                    fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\tikzstyle{mass}=[line width=0.6,red!30!black,fill=red!40!black!10,rounded corners=1,
+                  top color=red!40!black!20,bottom color=red!40!black!10,shading angle=20]
+\tikzstyle{spring}=[line width=0.8,blue!7!black!80,snake=coil,segment amplitude=5,segment length=5,line cap=round]
+\tikzset{>=latex} % for LaTeX arrow head
+\tikzstyle{force}=[->,myred,very thick,line cap=round]
+\def\tick#1#2{\draw[thick] (#1)++(#2:0.1) --++ (#2-180:0.2)}
+
+%pensolo
+\usepackage{siunitx}
+\usepackage{tikz,pgfplots}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc}
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{arrows.meta}
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.2pt}
+
+\colorlet{xcol}{blue!70!black}
+\colorlet{vcol}{green!60!black}
+\colorlet{myred}{red!70!black}
+\colorlet{myblue}{blue!70!black}
+\colorlet{mygreen}{green!70!black}
+\colorlet{mydarkred}{myred!70!black}
+\colorlet{mydarkblue}{myblue!60!black}
+\colorlet{mydarkgreen}{mygreen!60!black}
+\colorlet{acol}{red!50!blue!80!black!80}
+\tikzstyle{CM}=[red!40!black,fill=red!80!black!80]
+\tikzstyle{xline}=[xcol,thick,smooth]
+\tikzstyle{mass}=[line width=0.6,red!30!black,fill=red!40!black!10,rounded corners=1,
+                  top color=red!40!black!20,bottom color=red!40!black!10,shading angle=20]
+\tikzstyle{faded mass}=[dashed,line width=0.1,red!30!black!40,fill=red!40!black!10,rounded corners=1,
+                        top color=red!40!black!10,bottom color=red!40!black!10,shading angle=20]
+\tikzstyle{rope}=[brown!70!black,very thick,line cap=round]
+\def\rope#1{ \draw[black,line width=1.4] #1; \draw[rope,line width=1.1] #1; }
+\tikzstyle{force}=[->,myred,very thick,line cap=round]
+\tikzstyle{velocity}=[->,vcol,very thick,line cap=round]
+\tikzstyle{Fproj}=[force,myred!40]
+\tikzstyle{myarr}=[-{Latex[length=3,width=2]},thin]
+\def\tick#1#2{\draw[thick] (#1)++(#2:0.12) --++ (#2-180:0.24)}
+\DeclareMathOperator{\sn}{sn}
+\DeclareMathOperator{\cn}{cn}
+\DeclareMathOperator{\dn}{dn}
+\def\N{80} % number of samples in plots
+
+
+%urti
+\usepackage{siunitx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{patterns}
+\tikzset{>=latex} % for LaTeX arrow head
+
+\colorlet{xcol}{blue!70!black}
+\colorlet{vcol}{green!60!black}
+\colorlet{myred}{red!65!black}
+\colorlet{acol}{red!50!blue!80!black!80}
+\tikzstyle{mass}=[line width=0.6,red!30!black,fill=red!40!black!10,rounded corners=1,
+                  top color=red!40!black!20,bottom color=red!40!black!10,shading angle=20]
+\tikzstyle{ground}=[preaction={fill,top color=blue!50!black!10,bottom color=blue!50!black!5,shading angle=20},
+                    fill,pattern color=blue!20!black,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\tikzstyle{velocity}=[->,vcol,very thick,line cap=round]
+
+\tikzset{
+  pics/collision/.style={
+    code={
+      \draw[line width=0.5*#1,orange,fill=yellow]
+        (0:0.20*#1) -- (30:0.06*#1) -- (50:0.25*#1) -- (80:0.10*#1) -- (105:0.32*#1) --
+        (140:0.08*#1) -- (170:0.25*#1) -- (190:0.08*#1) -- (220:0.25*#1) --
+        (250:0.08*#1) -- (270:0.24*#1) -- (300:0.08*#1) -- (320:0.25*#1) -- (340:0.09*#1) -- cycle;
+  }},
+  pics/collision/.default=1,
+}
+
+
+%ruota bici
+\usepackage{tikz}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc}
+\usetikzlibrary{angles,quotes} % for pic
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.1pt}
+
+\colorlet{xcol}{blue!98!black}
+\colorlet{xcoldark}{blue!50!black}
+\colorlet{vcol}{green!70!black}
+\colorlet{myred}{red!80!black}
+\colorlet{mypurple}{blue!60!red!80}
+\colorlet{acol}{red!50!blue!80!black!80}
+\tikzstyle{rvec}=[->,xcol,very thick,line cap=round]
+\tikzstyle{force}=[->,myred,very thick,line cap=round]
+\tikzstyle{mass}=[line width=0.6,red!30!black,fill=red!40!black!10,rounded corners=1,
+                  top color=red!40!black!20,bottom color=red!40!black!10,shading angle=20]
+
+\tikzset{
+  pics/Tin/.style={
+    code={
+      \def\R{0.12}
+      \draw[pic actions,line width=0.6,#1,fill=white] % ,thick
+        (0,0) circle (\R) (-135:.75*\R) -- (45:.75*\R) (-45:.75*\R) -- (135:.75*\R);
+  }},
+  pics/Tout/.style={
+    code={
+      \def\R{0.12}
+      \draw[pic actions,line width=0.6,#1,fill=white] (0,0) circle (\R);
+      \fill[pic actions,#1] (0,0) circle (0.3*\R);
+  }},
+  pics/Tin/.default=mypurple,
+  pics/Tout/.default=mypurple,
+}
+
+\newcommand\rightAngle[4]{
+  \pgfmathanglebetweenpoints{\pgfpointanchor{#2}{center}}{\pgfpointanchor{#3}{center}}
+  \coordinate (tmpRA) at ($(#2)+(\pgfmathresult+45:#4)$);
+  \draw[white,line width=0.7] ($(#2)!(tmpRA)!(#1)$) -- (tmpRA) -- ($(#2)!(tmpRA)!(#3)$);
+  \draw[xcoldark] ($(#2)!(tmpRA)!(#1)$) -- (tmpRA) -- ($(#2)!(tmpRA)!(#3)$);
+}
+
+\def\r{0.16}  % axis radius
+\def\Ri{1.18} % wheel rims inside
+\def\Rr{1.30} % wheel rims outside
+\def\Rt{1.45} % wheel tyre
+\def\wheel{
+  \def\Ns{11}   % number of spokes
+  \def\Nn{34}   % number of tyre stud
+  \coordinate (O) at (0,0);
+  \foreach \i [evaluate={\ang=\i*360/(\Ns+1);}] in {0,...,\Ns}{
+    \draw[line width=0.5,black!70,line cap=round] (\ang-90:\r) --++ (\ang:\Rr);
+  }
+  \draw[very thin,fill=black!30] (O) circle (1.2*\r);
+  \draw[very thin,black!70] (O) circle (0.6*\r) circle (0.3*\r);
+  \foreach \i [evaluate={\ang=\i*360/(\Ns+1);}] in {0,...,\Ns}{
+    \fill (\ang+90:\r) circle (0.015);
+    \draw[line width=0.5,black!70,line cap=round] (\ang+90:\r) --++ (\ang:\Rr);
+  }
+  \draw[fill=black!30,even odd rule] (O) circle (\Ri) circle (\Rr);
+  
+  \draw[fill=black!84,even odd rule] (O) circle (\Rr) (\Rt,0)
+    \foreach \i [evaluate={\anga=\i*360/(\Nn+1);\angb=(\i+0.5)*360/(\Nn+1);
+                           \angc=(\i+1)*360/(\Nn+1);}] in {0,...,\Nn}{
+      -- (\anga:1.008*\Rt) arc(\anga:\angb:1.008*\Rt)
+      -- (\angb:1.000*\Rt) arc(\angb:\angc:1.000*\Rt)
+    } -- cycle;
+  \draw[very thin] (O) circle (0.97*\Rt) circle (0.945*\Rt);
+}
+
+
+%regola mano destra
+
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usepackage{xcolor}
+\colorlet{pinkskin}{pink!25}
+\colorlet{brownskin}{pink!5!brown!45}
+\colorlet{myred}{red!90!black}
+\colorlet{myblue}{blue!90!black}
+\colorlet{mypurple}{blue!50!red!80!black!80}
+\colorlet{Bcol}{violet!90}
+\colorlet{BFcol}{red!60!black}
+\colorlet{veccol}{green!45!black}
+\colorlet{Icol}{blue!70!black}
+\colorlet{mucol}{red!90!black}
+\tikzstyle{BField}=[->,line width=2,Bcol]
+\tikzstyle{current}=[->,Icol] %thick,
+\tikzstyle{force}=[->,line width=2,BFcol]
+\tikzstyle{vector}=[->,line width=2,veccol]
+\tikzstyle{thick vector}=[->,line width=2,veccol]
+\tikzstyle{mu vector}=[->,line width=2,mucol]
+\tikzstyle{velocity}=[->,line width=2,veccol]
+\tikzstyle{charge+}=[very thin,draw=black,top color=red!50,bottom color=red!90!black,shading angle=20,circle,inner sep=0.5]
+
+
+%momento angolare
+\usetikzlibrary{bending} % for arrow head angle
+\colorlet{xcol}{blue!70!black}
+\colorlet{vcol}{green!60!black}
+\colorlet{pcol}{red!60!black}
+\colorlet{Lcol}{green!50!black}
+\colorlet{myred}{red!65!black}
+\colorlet{mypurple}{blue!60!red!80}
+\colorlet{acol}{red!50!blue!80!black!80}
+\tikzstyle{rvec}=[->,xcol,very thick,line cap=round]
+\tikzstyle{vvec}=[->,vcol,very thick,line cap=round]
+\tikzstyle{pvec}=[->,pcol,very thick,line cap=round]
+\tikzstyle{Lvec}=[->,Lcol,very thick,line cap=round]
+\tikzstyle{mass}=[line width=0.6,red!30!black,draw=red!30!black, %rounded corners=1,
+                  top color=red!40!black!30,bottom color=red!40!black!10,shading angle=30]
+
+
+%momenti di inerzia
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc}
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{patterns}
+\usetikzlibrary{bending} % for arrow head angle
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{0.8pt}
+
+\colorlet{xcol}{blue!70!black}
+\colorlet{myred}{red!65!black}
+\tikzstyle{rvec}=[->,xcol,very thick,line cap=round]
+\tikzstyle{mass line}=[line width=0.5,draw=red!30!black]
+\tikzstyle{myarr}=[-{Latex[length=3,width=2]},blue!40!black]
+\tikzstyle{myarr2}=[{Latex[length=3,width=2]}-{Latex[length=3,width=2]},blue!40!black]
+\tikzstyle{mass}=[mass line, %rounded corners=1,
+                  top color=red!40!black!30,bottom color=red!40!black!10,shading angle=30]
+\tikzstyle{middle mass}=[mass line,top color=red!40!black!50,bottom color=red!40!black!50,
+                         middle color=red!40!black!10,shading angle=30]
+
+\def\r{0.05} % pulley small radius
+\tikzset{
+  pics/rotarr/.style={
+    code={
+      \draw[white,line width=0.8] ({#1*cos(210)},0) arc(-210:35:{#1} and {0.35*#1});
+      \draw[-{>[flex'=1]}] ({#1*cos(210)},0) coordinate (W1) arc(-210:35:{#1} and {0.35*#1})
+        node[midway] (W2) {} --++ (150:0.1) coordinate (W3);
+  }},
+  pics/rotarr/.default=0.3,
+}
+
+
+%coriolis e sistema inerziale
+
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{arrows.meta} % for arrow size
+\usetikzlibrary{bending} % for arrow head angle
+\usetikzlibrary{decorations.pathmorphing} % for decorate random steps
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\contourlength{1.3pt}
+
+\colorlet{xcol}{blue!70!black}
+\colorlet{xcol'}{xcol!50!red}
+\colorlet{vcol}{green!45!black}
+\colorlet{acol}{red!50!blue!80!black!80}
+\tikzstyle{rvec}=[->,very thick,xcol,line cap=round]
+\tikzstyle{vvec}=[->,very thick,vcol,line cap=round]
+\tikzstyle{avec}=[->,very thick,acol,line cap=round]
+\colorlet{myred}{red!65!black}
+\tikzstyle{force}=[->,myred,very thick,line cap=round]
+\tikzstyle{mass}=[line width=0.5,draw=red!50!black,fill=red!50!black!10,rounded corners=1,
+                  top color=red!50!black!30,bottom color=red!50!black!10,shading angle=20]
+\tikzstyle{disk}=[line width=0.5,orange!30!black,fill=orange!40!black!10,
+                  top color=orange!40!black!20,bottom color=orange!40!black!10,shading angle=20]
+\tikzstyle{pole}=[line width=0.5,blue!20!black,fill=orange!20!black!10,
+                  top color=blue!20!black!20,bottom color=blue!20!black!10,shading angle=20]
+\tikzstyle{rope}=[brown!70!black,line width=1,line cap=round] %very thick
+\tikzstyle{myarr}=[-{Latex[length=3,width=2,flex'=1]},thin]
+\tikzstyle{mydashed}=[dash pattern=on 2pt off 1pt]
+\def\rope#1{ \draw[rope,black,line width=1.4] #1; \draw[rope,line width=1.1] #1; }
+\def\tick#1#2{\draw[thick] (#1) ++ (#2:0.1) --++ (#2-180:0.2)}
+\newcommand\rightAnglee[4]{
+  \pgfmathanglebetweenpoints{\pgfpointanchor{#2}{center}}{\pgfpointanchor{#3}{center}}
+  \coordinate (tmpRA) at ($(#2)+(\pgfmathresult+45:#4)$);
+  %\draw[white,line width=0.6] ($(#2)!(tmpRA)!(#1)$) -- (tmpRA) -- ($(#2)!(tmpRA)!(#3)$);
+  \draw[black] ($(#2)!(tmpRA)!(#1)$) -- (tmpRA) -- ($(#2)!(tmpRA)!(#3)$);
+}
+
+
+%culomb forza
+\tikzstyle{charge}=[thin,top color=red!50,bottom color=red!70,shading angle=20]
+\tikzstyle{charge+}=[thin,top color=red!50,bottom color=red!90!black,shading angle=20]
+\tikzstyle{charge-}=[thin,top color=blue!50,bottom color=blue!80,shading angle=20]
+\tikzstyle{force}=[->,very thick,orange!80!black]
+\tikzstyle{vector}=[->,very thick,green!45!black]
+
+%campo elettrico
+\usepackage{bm}
+\usepackage{tikz,pgfplots}
+\tikzset{>=latex} % for LaTeX arrow head
+\pgfplotsset{compat=1.13}
+\usetikzlibrary{decorations.markings,intersections,calc}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usepackage{xcolor}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EcolFL}{orange!80!black}
+\colorlet{Bcol}{blue!90!black}
+\tikzstyle{EcolEP}=[blue!80!white]
+\colorlet{veccol}{green!45!black}
+\tikzstyle{charge+}=[very thin,top color=red!50,bottom color=red!90!black,shading angle=20]
+\tikzstyle{charge-}=[very thin,top color=blue!50,bottom color=blue!80,shading angle=20]
+\tikzstyle{vector}=[->,thick,veccol]
+\tikzset{EFieldLineArrow/.style={EcolFL,decoration={markings,mark=at position #1 with {\arrow{latex}}},
+                                 postaction={decorate}},
+         EFieldLineArrow/.default=0.5}
+
+
+%campo elettrico interazioni
+\pgfplotsset{compat=1.13}
+\usetikzlibrary{decorations.markings,intersections,calc}
+\usepackage{ifthen}
+%\usepackage{etoolbox}
+\usepackage{xcolor}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EcolFL}{orange!80!black}
+\colorlet{Bcol}{blue!90!black}
+\tikzstyle{EcolEP}=[blue!80!white]
+\tikzstyle{charge+}=[very thin,top color=red!50,bottom color=red!90!black,shading angle=20]
+\tikzstyle{charge-}=[very thin,top color=blue!50,bottom color=blue!80,shading angle=20]
+%\tikzstyle{EFielLineArrow2}=[
+%    EcolFL,decoration={markings,
+%          mark=at position 0.5 with {\arrow[rotate=\angle]{latex}}},
+%          postaction={decorate}]
+\tikzset{
+   EFielLineArrow/.style args = {#1}{EcolFL,decoration={markings,
+          mark=at position 0.5 with {\arrow[rotate=#1]{latex}}},
+          postaction={decorate}}
+}
+
+\makeatletter
+  \newcommand{\xy}[3]{% % FIND X, Y
+    \tikz@scan@one@point\pgfutil@firstofone#1\relax
+    \edef#2{\the\pgf@x}%
+    \edef#3{\the\pgf@y}%
+  }
+\makeatother
+\newcommand{\EFielLineArrow}[2]{ % ELECTRIC FIELD LINE ARROW
+  \pgfkeys{/pgf/fpu,/pgf/fpu/output format=fixed} % for calculation between -1*10^324 and +1*10^324
+  \pgfmathsetmacro{\x}{#1/28.45pt}
+  \pgfmathsetmacro{\y}{#2/28.45pt}
+  \pgfmathsetmacro{\U}{\Q*((\x+\a)^2+(\y)^2)^(3/2)}
+  \pgfmathsetmacro{\V}{\q*((\x-\a)^2+(\y)^2)^(3/2)}
+  \pgfkeys{/pgf/fpu=false}
+  \pgfmathparse{
+    atan2(((\y)*\V + (\y)*\U),((\x+\a)*\V + (\x-\a)*\U))
+  }
+  \edef\angle{\pgfmathresult}
+  \pgfmathsetmacro{\D}{int(1000*\q*(\x+\a)/sqrt((\x+\a)^2+\y*\y) + 1000*\Q*(\x-\a)/sqrt((\x-\a)^2+\y*\y))/1000}
+  \draw[EFielLineArrow={\angle}] (\xpt,\ypt);
+}
+\newcommand{\EVector}[2]{ % ELECTRIC FIELD VECTOR
+  \pgfmathsetmacro{\x}{#1/28.45pt}
+  \pgfmathsetmacro{\y}{#2/28.45pt}
+  \pgfmathsetmacro{\U}{((\x+\a)^2+(\y)^2)^(3/2)}
+  \pgfmathsetmacro{\V}{((\x-\a)^2+(\y)^2)^(3/2)}
+  \pgfmathsetmacro{\Ex}{\q*3*(\x+\a)/\U + \Q*3*(\x-\a)/\V}
+  \pgfmathsetmacro{\Ey}{\q*3*(\y)/\U + \Q*3*(\y)/\V}
+  \fill[Ecol] (\x,\y) circle (0.8pt);
+  \draw[->,Ecol,thick] (\x,\y) --++ (\Ex,\Ey)
+    node[Ecol,right,scale=0.8] {$\bm{E}$};
+  \pgfmathsetmacro{\D}{int(1000*\q*(\x+\a)/sqrt((\x+\a)^2+\y*\y) + 1000*\Q*(\x-\a)/sqrt((\x-\a)^2+\y*\y))/1000}
+}
+\newcommand{\EFieldLines}{ % ELECTRIC FIELD LINES
+  \message{^^JField lines (\q,\Q) with contours range ^^J\range^^J}
+  
+  % PATHS for intersections
+  \path[name path=ellipse1] (-\a,0) ellipse ({0.90*\R} and {1.5*\R});
+  \path[name path=ellipse2] (+\a,0) ellipse ({0.75*\R} and {1.5*\R});
+  \path[name path=ellipse3] (  0,0) ellipse ({\a+\R} and 1.5*\R);
+  
+  % FIELD LINES
+  \draw[EcolFL,name path=Elines] plot[id=plot, raw gnuplot, smooth]
+    function{
+       f(x,y) = \q*(x+\a)/sqrt((x+\a)**2+y**2) + \Q*(x-\a)/sqrt((x-\a)**2+y**2);
+       set xrange [\xmin:\xmax];
+       set yrange [-\ymax:\ymax];
+       set view 0,0;
+       set isosample 400,400;
+       set cont base;
+       set cntrparam levels discrete \range;
+       unset surface;
+       splot f(x,y)
+    };
+  
+  % ELLIPSE INTERSECTIONS
+  \pgfmathsetmacro{\oppositesign}{\q*\Q<0 ? 1 : 0}
+  \ifthenelse{\oppositesign>0}{
+    % OPPOSITE SIGN
+    \foreach \c in {1,2}{
+      \message{Intersections \c...}
+      \path[name intersections={of=Elines and ellipse\c,total=\t}]
+        \pgfextra{\xdef\Nb{\t}};
+      \message{ found \Nb ^^J}
+      \foreach \i in {1,...,\Nb}{
+        \message{  \i}
+        \xy{(intersection-\i)}{\xpt}{\ypt}
+        \EFielLineArrow{\xpt}{\ypt}
+        \message{ (\D,\x,\y)^^J}
+      }
+    }
+  }{
+    % SAME SIGN
+    \message{Intersections...}
+    \path[name intersections={of=Elines and ellipse3,total=\t}]
+        \pgfextra{\xdef\Nb{\t}}; 
+    \message{ found \Nb ^^J}
+    \foreach \i in {1,...,\Nb}{
+      \message{  \i}
+      \xy{(intersection-\i)}{\xpt}{\ypt}
+      \EFielLineArrow{\xpt}{\ypt}
+      \message{ (\D,\x,\y)^^J}
+    }
+  }
+}
+\newcommand{\EEquipot}{ % EQUIPOTENTIAL SURFACE
+  \message{^^JEquipotential surface (\q,\Q) with contours range ^^J\rangeEP}
+  
+  % FIELD LINES
+  \draw[EcolEP] plot[id=plot, raw gnuplot, smooth] %,dashed
+    function{
+       f(x,y) = \q/sqrt((x+\a)**2+y**2) + \Q/sqrt((x-\a)**2+y**2);
+       set xrange [\xmin:\xmax];
+       set yrange [-\ymax:\ymax];
+       set view 0,0;
+       set isosample 400,400;
+       set cont base;
+       set cntrparam levels discrete \rangeEP;
+       unset surface;
+       splot f(x,y)
+    };
+}
+\newcommand{\EVectorOnFieldLines}{ % ELECTRIC FIELD VECTOR
+  \message{^^JVector on field lines (\q,\Q) with contours range ^^J\C^^J}
+  
+  % FIELD LINES
+  \path[name path=xline] (\Cx,-\ymax) -- (\Cx,-\a) (\Cx,\a) -- (\Cx,\ymax);
+  \path[name path=Elines] plot[id=plot, raw gnuplot, smooth]
+    function{
+       f(x,y) = \q*(x+\a)/sqrt((x+\a)**2+y**2) + \Q*(x-\a)/sqrt((x-\a)**2+y**2);
+       set xrange [\xmin:\xmax];
+       set yrange [-\ymax:\ymax];
+       set view 0,0;
+       set isosample 100,100;
+       set cont base;
+       set cntrparam levels discrete \C;
+       unset surface;
+       splot f(x,y)
+    };
+  
+    \message{Intersections...}
+    \path[name intersections={of=Elines and xline,total=\t}]
+      \pgfextra{\xdef\Nb{\t}};
+    \message{ found \Nb ^^J}
+    \foreach \i in {1,...,\Nb}{
+      \message{  \i}
+      \xy{(intersection-\i)}{\xpt}{\ypt}
+      \EVector{\xpt}{\ypt}
+      \message{ (\D,\x,\y)^^J}
+    }
+}
+
+%flusso
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes} % for path name
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.4pt}
+
+\usepackage{xcolor}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EcolFL}{orange!90!black}
+\colorlet{veccol}{green!45!black}
+\colorlet{EFcol}{red!60!black}
+\tikzstyle{charged}=[top color=blue!20,bottom color=blue!40,shading angle=10]
+\tikzstyle{darkcharged}=[very thin,top color=blue!60,bottom color=blue!80,shading angle=10]
+\tikzstyle{charge+}=[very thin,top color=red!80,bottom color=red!80!black,shading angle=-5]
+\tikzstyle{charge-}=[very thin,top color=blue!50,bottom color=blue!70!white!90!black,shading angle=10]
+\tikzstyle{darkcharged}=[very thin,top color=blue!60,bottom color=blue!80,shading angle=10]
+\tikzstyle{gauss surf}=[green!70!black,top color=green!2,bottom color=green!80!black!70,shading angle=5,fill opacity=0.6]
+\tikzstyle{gauss lid}=[gauss surf,middle color=green!80!black!20,shading angle=40,fill opacity=0.7]
+\tikzstyle{gauss dark}=[green!60!black,fill=green!60!black!70,fill opacity=0.8]
+\tikzstyle{gauss line}=[green!80!black]
+\tikzstyle{gauss dashed line}=[green!60!black!80,dashed,line width=0.2]
+\tikzstyle{vector}=[->,thick,veccol]
+\tikzstyle{normalvec}=[->,thick,blue!80!black!80]
+\tikzstyle{EField}=[->,thick,Ecol]
+\tikzstyle{EField dashed}=[dashed,Ecol,line width=0.6]
+\tikzset{
+  EFieldLine/.style={thick,EcolFL,decoration={markings,
+                     mark=at position #1 with {\arrow{latex}}},
+                     postaction={decorate}},
+  EFieldLine/.default=0.5}
+\tikzstyle{measure}=[fill=white,midway,outer sep=2]
+
+%legge di gauss
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes,intersections} % for path name
+\tikzset{>=latex} % for LaTeX arrow head
+\contourlength{1.8pt}
+
+\usepackage{xcolor}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EcolFL}{orange!80!black}
+\colorlet{veccol}{green!45!black}
+\colorlet{EFcol}{red!60!black}
+\colorlet{pluscol}{red!60!black}
+\colorlet{minuscol}{blue!60!black}
+\colorlet{gausscol}{green!50!black!80}
+\tikzstyle{charged}=[top color=blue!20,bottom color=blue!40,shading angle=10]
+\tikzstyle{charge+}=[very thin,draw=black,top color=red!80,bottom color=red!80!black,shading angle=-5]
+\tikzstyle{charge-}=[very thin,draw=black,top color=blue!50,bottom color=blue!70!white!90!black,shading angle=10]
+\tikzstyle{darkcharged}=[very thin,top color=blue!60,bottom color=blue!80,shading angle=10]
+\tikzstyle{gauss surf}=[green!40!black,top color=green!2,bottom color=green!80!black!70,shading angle=5,fill opacity=0.6]
+\tikzstyle{gauss dark}=[green!40!black,fill=green!40!black!70,fill opacity=0.8]
+\tikzstyle{gauss line}=[green!40!black]
+\tikzstyle{gauss dashed line}=[green!60!black!80,dashed,line width=0.2]
+\tikzstyle{vector}=[->,thick,veccol]
+\tikzstyle{normalvec}=[->,thick,blue!80!black!80]
+\tikzstyle{EField}=[->,thick,Ecol]
+\tikzstyle{EField dashed}=[dashed,Ecol,line width=0.6]
+\tikzset{
+  EFieldLine/.style={thick,EcolFL,decoration={markings,
+                     mark=at position #1 with {\arrow{latex}}},
+                     postaction={decorate}},
+  EFieldLine/.default=0.5}
+\tikzstyle{metal}=[top color=black!5,bottom color=black!15,shading angle=30]
+\tikzstyle{measure}=[fill=green!70!black!8,midway,outer sep=0,inner sep=1]
+
+
+%filo elettrico
+\usepackage{xcolor}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EcolFL}{orange!80!black}
+\colorlet{veccol}{green!45!black}
+\colorlet{EFcol}{red!60!black}
+\tikzstyle{charged}=[top color=blue!20,bottom color=blue!40,shading angle=10]
+\tikzstyle{darkcharged}=[very thin,top color=blue!60,bottom color=blue!80,shading angle=10]
+\tikzstyle{charge+}=[very thin,top color=red!80,bottom color=red!80!black,shading angle=-5]
+\tikzstyle{charge-}=[very thin,top color=blue!50,bottom color=blue!70!white!90!black,shading angle=10]
+\tikzstyle{gauss surf}=[green!40!black,top color=green!2,bottom color=green!80!black!70,shading angle=5,fill opacity=0.5]
+\tikzstyle{gauss lid}=[gauss surf,middle color=green!80!black!20,shading angle=40,fill opacity=0.6]
+\tikzstyle{gauss dark}=[green!50!black,fill=green!60!black!70,fill opacity=0.8]
+\tikzstyle{gauss line}=[green!40!black]
+\tikzstyle{gauss dashed line}=[green!60!black!80,dashed,line width=0.2]
+\tikzstyle{EField}=[->,thick,Ecol]
+\tikzstyle{vector}=[->,thick,veccol]
+\tikzstyle{normalvec}=[->,thick,blue!80!black!80]
+\tikzstyle{EFieldLine}=[thick,EcolFL,decoration={markings,
+          mark=at position 0.5 with {\arrow{latex}}},
+          postaction={decorate}]
+\tikzstyle{measure}=[fill=white,midway,outer sep=2]
+
+
+%per i grafici campo elettrico
+
+\usepackage{amsmath} % for \dfrac
+\usepackage{physics}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usetikzlibrary{decorations.markings}
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{veccol}{green!45!black}
+\tikzstyle{EFieldd}=[thick,Ecol]
+
+
+%parallelepipedo cilindro infinitesimo
+\usepackage{tikz-3dplot}
+
+%Disegno condensatore in %\section{Il condensatore}
+\usepackage{mathtools}
+\usetikzlibrary{decorations.markings}
+
+\colorlet{Ecolor}{orange!90!black}
+\colorlet{pluscolor}{red!60!black}
+\colorlet{minuscolor}{blue!60!black}
+\tikzstyle{anode}=[top color=red!20, bottom color=red!50]
+\tikzstyle{cathode}=[top color=blue!20, bottom color=blue!40]
+\tikzstyle{charge+}=[very thin,top color=red!50, bottom color=red!80]
+\tikzstyle{charge-}=[very thin,top color=blue!40, bottom color=blue!70]
+\tikzset{EFieldLine/.style={
+  Ecolor, decoration={markings, mark=at position #1 with {\arrow{stealth}}}, postaction={decorate}}
+}
+
+%condensatore
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{calc}
+\tikzset{>=latex} % for LaTeX arrow head
+
+\usepackage{xcolor}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EcolFL}{orange!90!black}
+\colorlet{veccol}{green!45!black}
+\colorlet{EFcol}{red!60!black}
+\colorlet{pluscol}{red!60!black}
+\colorlet{minuscol}{blue!60!black}
+\tikzstyle{anode}=[top color=red!20,bottom color=red!50,shading angle=20]
+\tikzstyle{cathode}=[top color=blue!20,bottom color=blue!40,shading angle=20]
+\tikzstyle{charge+}=[very thin,top color=red!80,bottom color=red!80!black,shading angle=-5]
+\tikzstyle{charge-}=[very thin,top color=blue!50,bottom color=blue!70!white!90!black,shading angle=10]
+\tikzstyle{vector}=[->,thick,veccol]
+\tikzstyle{normalvec}=[->,thick,blue!80!black!80]
+\tikzstyle{Cstyle}=[very thick,orange!90!black]
+\tikzstyle{EField}=[->,thick,Ecol]
+\tikzstyle{EField dashed}=[dashed,Ecol,line width=0.6]
+\tikzset{
+  EFieldLine/.style={thick,EcolFL,decoration={markings,
+                     mark=at position #1 with {\arrow{latex}}},
+                     postaction={decorate}},
+  EFieldLine/.default=0.5}
+\tikzstyle{measure}=[fill=white,midway,outer sep=2]
+
+
+
+
+%Grafici condensaori e resistori
+\usepackage{tikz,pgfplots}
+\usepackage[siunitx]{circuitikz} %[symbols]
+\usepackage{xcolor}
+\tikzset{>=latex} % for LaTeX arrow head
+\colorlet{Icol}{blue!50!black}
+\colorlet{Ccol}{orange!90!black}
+\colorlet{pluscol}{red!60!black}
+\colorlet{minuscol}{blue!60!black}
+%\tikzstyle{charged}=[top color=blue!20,bottom color=blue!40,shading angle=10]
+\tikzstyle{thick C}=[C,thick,color=Ccol,Ccol,l=$C$]
+\tikzstyle{mybattery}=[battery1,l=$\Delta V$,invert]
+
+%forza elettrica vs forza gravitazionale
+
+%\usepackage{bm} % \bm
+%\usepackage{physics}
+%\usepackage{tikz,pgfplots}
+%\usepackage[outline]{contour} % glow around text
+%\usetikzlibrary{angles,quotes} % for pic (angle labels)
+%\usetikzlibrary{calc}
+%\usetikzlibrary{decorations.markings}
+%\tikzset{>=latex} % for LaTeX arrow head
+%\contourlength{1.6pt}
+%\usepackage{xcolor}
+%\colorlet{Ecol}{orange!90!black}
+%\colorlet{EcolFL}{orange!80!black}
+%\colorlet{veccol}{green!45!black}
+%\colorlet{EFcol}{red!60!black}
+%\tikzstyle{EcolEP}=[blue!80!white]
+%\tikzstyle{charged}=[top color=blue!30,bottom color=blue!50,shading angle=10]
+%\tikzstyle{darkcharged}=[very thin,top color=blue!60,bottom color=blue!80,shading angle=10]
+%\tikzstyle{charge+}=[very thin,top color=red!50,bottom color=red!90!black,shading angle=20]
+%\tikzstyle{charge-}=[very thin,top color=blue!50,bottom color=blue!80,shading angle=20]
+%\tikzstyle{gauss surf}=[blue!90!black,top color=blue!2,bottom %color=blue!80!black!70,shading angle=5,fill opacity=0.1]
+%\tikzstyle{gauss line}=[blue!90!black]
+%\tikzstyle{vector}=[->,very thick,veccol]
+%\tikzset{EFieldLine/.style={thick,EcolFL,decoration={markings,mark=at position #1 with %{\arrow{latex}}},
+%                                 postaction={decorate}},
+%         EFieldLine/.default=0.5}
+%\tikzstyle{measure}=[fill=white,midway,outer sep=2]
+
+
+
+%Corrente
+\usepackage{physics}
+\usepackage{bm}
+\usepackage{tikz}
+\tikzset{>=latex} % for LaTeX arrow head
+\usetikzlibrary{decorations.markings}
+\usepackage{xcolor}
+\colorlet{Ecol}{orange!90!black}
+%\colorlet{charge+}{blue!80!white}
+\tikzstyle{charge0}=[top color=green!80!black!50,bottom color=green!80!black,shading angle=20]
+\tikzstyle{charge+}=[top color=red!50,bottom color=red!70!black,shading angle=20]
+\tikzstyle{charge-}=[top color=blue!50,bottom color=blue!80,shading angle=20]
+\tikzstyle{metal}=[top color=black!15,bottom color=black!25,middle color=black!5,shading angle=10]
+\tikzset{
+  EField/.style={thick,Ecol,decoration={markings,
+                 mark=at position #1 with {\arrow{latex}}},
+                 postaction={decorate}},
+  EField/.default=0.5}
+
+
+%$campo elettromotore$
+\colorlet{Icol}{blue!50!black}
+\colorlet{Ccol}{orange!90!black}
+\colorlet{pluscol}{red!60!black}
+\colorlet{minuscol}{blue!60!black}
+%\tikzstyle{charged}=[top color=blue!20,bottom color=blue!40,shading angle=10]
+\tikzstyle{thick C}=[C,thick,color=Ccol,Ccol,l=$C$]
+\tikzstyle{mybattery}=[battery1,l=$\Delta V$,invert]
+
+
+%circuiti elettrici
+\usepackage[siunitx]{circuitikz} %[symbols]
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{decorations.markings}
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{Icol}{blue!50!black}
+\colorlet{Ccol}{orange!90!black}
+\colorlet{Rcol}{green!50!black}
+\colorlet{loopcol}{red!90!black!25}
+\colorlet{pluscol}{red!60!black}
+\colorlet{minuscol}{blue!60!black}
+\newcommand\EMF{\mathcal{E}} %\varepsilon}
+\contourlength{1.5pt}
+\tikzstyle{EMF}=[battery1,l=$\EMF$,invert]
+\tikzstyle{internal R}=[R,color=Rcol,Rcol,l=$r$,/tikz/circuitikz/bipoles/length=30pt]
+\tikzstyle{loop}=[->,red!90!black!25]
+\tikzstyle{loop label}=[loopcol,fill=white,scale=0.8,inner sep=1]
+\tikzstyle{thick R}=[R,color=Rcol,thick,Rcol,l=$R$]
+\tikzstyle{thick R1}=[R,color=Rcol,thick,Rcol,l=$R1$]
+\tikzstyle{thick R2}=[R,color=Rcol,thick,Rcol,l=$R2$]
+\tikzstyle{thick R3}=[R,color=Rcol,thick,Rcol,l=$R3$]
+\tikzstyle{thick C}=[C,thick,color=Ccol,Ccol,l=$C$]
+\tikzstyle{thick C1}=[C,thick,color=Ccol,Ccol,l=$C1$]
+\tikzstyle{myswitch}=[closing switch,line width=0.3] %-{Latex[length=3]},
+\tikzstyle{myswitchi}=[opening switch,line width=0.3, invert] %-{Latex[length=3]},
+
+
+
+
+%ancora circuiti ma con elelttromotore
+\usepackage[siunitx]{circuitikz} %[symbols]
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{decorations.markings}
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{Icol}{blue!50!black}
+\colorlet{Ccol}{orange!90!black}
+\colorlet{Rcol}{green!50!black}
+\colorlet{Lcol}{violet!90}
+\colorlet{loopcol}{red!90!black!25}
+\colorlet{pluscol}{red!60!black}
+\colorlet{minuscol}{blue!60!black}
+\contourlength{1.5pt}
+%\tikzstyle{EMF}=[battery1,l=$\AC_0$,invert]
+\tikzstyle{AC}=[sV,/tikz/circuitikz/bipoles/length=25pt,l=$\EMF(t)$]
+\tikzstyle{internal R}=[R,color=Rcol,Rcol,l=$r$,/tikz/circuitikz/bipoles/length=30pt]
+\tikzstyle{loop}=[->,red!90!black!25]
+\tikzstyle{loop label}=[loopcol,fill=white,scale=0.8,inner sep=1]
+\tikzstyle{thick R}=[R,color=Rcol,thick,Rcol,l=$R$]
+\tikzstyle{thick C}=[C,thick,color=Ccol,Ccol,l=$C$]
+\tikzstyle{thick L}=[L,thick,color=Lcol,Lcol,l=$L$,/tikz/circuitikz/bipoles/length=56pt] %inductor
+\tikzstyle{thick Z}=[generic,color=Icol,thick,Icol,l=$Z$,fill=Icol!6]
+
+
+%legge di Kirchhoff
+\usepackage[siunitx]{circuitikz} %[symbols]
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.markings}
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{Icol}{blue!50!black}
+\colorlet{Ccol}{orange!90!black}
+\colorlet{Rcol}{green!50!black}
+\colorlet{loopcol}{red!90!black!25}
+\colorlet{pluscol}{red!60!black}
+\colorlet{minuscol}{blue!60!black}
+%\tikzstyle{charged}=[top color=blue!20,bottom color=blue!40,shading angle=10]
+\contourlength{1.5pt}
+\tikzstyle{EMF}=[battery1,l=$\EMF$,invert]
+\tikzstyle{internal R}=[R,color=Rcol,Rcol,l=$r$,/tikz/circuitikz/bipoles/length=30pt]
+\tikzstyle{loop}=[->,red!90!black!25]
+\tikzstyle{loop label}=[loopcol,fill=white,scale=0.8,inner sep=1]
+\tikzstyle{thick R}=[R,color=Rcol,thick,Rcol,l=$R$]
+%\tikzset{
+%  loop/.style={thick,red!80!black!30,decoration={markings,
+%               mark=at position #1 with {\arrow{latex}}},
+%               postaction={decorate}},
+%  loop/.default=0.6}
+
+
+%Carica di un consensatore circuito RC
+
+\colorlet{Rcol}{green!60!black}
+\colorlet{myblue}{blue!70!black}
+\colorlet{myred}{red!70!black}
+\colorlet{Ecol}{orange!90!black}
+\tikzstyle{Rline}=[Rcol,thick]
+\tikzstyle{gline}=[Rcol,thick]
+\tikzstyle{bline}=[myblue,thick]
+\tikzstyle{rline}=[myred,thick]
+
+
+
+
+%campo elettromagentico
+
+\usepackage{tikz,pgfplots}
+\usepackage{tikz-3dplot}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.markings}
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{veccol}{green!45!black}
+\colorlet{Bcol}{violet!90}
+\colorlet{BFcol}{red!70!black}
+\colorlet{veccol}{green!45!black}
+\colorlet{Icol}{blue!70!black}
+\colorlet{Ampcol}{green!60!black!70}
+\tikzstyle{BField}=[->,thick,Bcol]
+\tikzstyle{current}=[->,Icol,thick]
+\tikzstyle{force}=[->,thick,BFcol]
+\tikzstyle{vector}=[->,thick,veccol]
+\tikzstyle{velocity}=[->,very thick,vcol]
+\tikzstyle{charge+}=[very thin,draw=black,top color=red!50,bottom color=red!90!black,shading angle=20,circle,inner sep=0.5]
+\tikzstyle{charge-}=[very thin,draw=black,top color=blue!50,bottom color=blue!80,shading angle=20,circle,inner sep=0.5]
+\tikzstyle{metal}=[line width=0.3,top color=black!15,bottom color=black!25,middle color=black!20,shading angle=10]
+\tikzstyle{darkmetal}=[line width=0.4,top color=red!20!black!40,bottom color=red!20!black!70,middle color=red!20!black!30,shading angle=10]
+\tikzstyle{measline}=[{Latex[length=3]}-{Latex[length=3]}]
+\tikzset{
+  BFieldLine/.style={thick,Bcol,decoration={markings,mark=at position #1 with {\arrow{latex}}},
+                                 postaction={decorate}},
+  BFieldLine/.default=0.5,
+  Ampcurve/.style={thick,Ampcol,decoration={markings,mark=at position #1 with {\arrow{latex}}},
+                                postaction={decorate}},
+  Ampcurve/.default=0.55,
+  pics/Bin/.style={
+    code={
+      \def\R{0.12}
+      \draw[pic actions,line width=0.6,#1,fill=white] % ,thick
+        (0,0) circle (\R) (-135:.75*\R) -- (45:.75*\R) (-45:.75*\R) -- (135:.75*\R);
+  }},
+  pics/Bout/.style={
+    code={
+      \def\R{0.12}
+      \draw[pic actions,line width=0.6,#1,fill=white] (0,0) circle (\R);
+      \fill[pic actions,#1] (0,0) circle (0.3*\R);
+  }},
+  pics/Bin/.default=Bcol,
+  pics/Bout/.default=Bcol,
+}
+\tikzstyle{measure}=[fill=white,midway,outer sep=2]
+\contourlength{1.4pt}
+
+% RING SHADING
+\makeatletter
+\pgfdeclareradialshading[tikz@ball]{ring}{\pgfpoint{0cm}{0cm}}%
+{rgb(0cm)=(1,1,1);
+rgb(0.719cm)=(1,1,1);
+color(0.72cm)=(tikz@ball);
+rgb(0.9cm)=(1,1,1)}
+\tikzoption{ring color}{\pgfutil@colorlet{tikz@ball}{#1}\def\tikz@shading{ring}\tikz@addmode{\tikz@mode@shadetrue}}
+\makeatother
+
+%solenoide
+
+\usepackage{ifthen}
+\usepackage{tikz,pgfplots}
+\usepackage{tikz-3dplot}
+\usepackage{auto-pst-pdf}
+\usepackage{pst-magneticfield}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{angles,quotes} % for pic (angle labels)
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.markings}
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{Ecol}{orange!90!black}
+\colorlet{EcolFL}{orange!80!black}
+\colorlet{veccol}{green!45!black}
+\colorlet{projcol}{blue!70!black}
+\colorlet{EFcol}{red!60!black}
+\colorlet{Bcol}{violet!90}
+\colorlet{Bcol1}{violet!80!blue!90}
+\colorlet{Bcol2}{violet!80!red!90}
+\colorlet{BFcol}{red!70!black}
+\colorlet{veccol}{green!45!black}
+\colorlet{Icol}{blue!70!black}
+\colorlet{Ampcol}{green!60!black!70}
+\tikzstyle{BField}=[->,thick,Bcol]
+\tikzstyle{current}=[->,Icol,thick]
+\tikzstyle{force}=[->,thick,BFcol]
+\tikzstyle{vector}=[->,thick,veccol]
+\tikzstyle{velocity}=[->,very thick,vcol]
+\tikzstyle{metal}=[top color=black!15,bottom color=black!25,middle color=black!20,shading angle=10]
+\tikzstyle{darkmetal}=[top color=black!40,bottom color=black!70,middle color=black!30,shading angle=10]
+\tikzstyle{lightmetal}=[thin,black!20,top color=black!3,bottom color=black!6,middle color=black!1,shading angle=10]
+\tikzstyle{proj}=[projcol!80,line width=0.08] %very thin
+\tikzstyle{area}=[draw=veccol,fill=veccol!80,fill opacity=0.6]
+\tikzstyle{measline}=[{Latex[length=3]}-{Latex[length=3]}]
+\tikzset{
+  BFieldLine/.style={thick,Bcol,decoration={markings,mark=at position #1 with {\arrow{latex}}},
+                                postaction={decorate}},
+  BFieldLine/.default=0.5,
+  Ampcurve/.style={Ampcol,decoration={markings,mark=at position #1 with {\arrow{latex}}},
+                          postaction={decorate}},
+  Ampcurve/.default=0.55,
+  pics/Bin/.style={
+    code={
+      \def\R{0.12}
+      \draw[pic actions,line width=0.6,#1,fill=white] % ,thick
+        (0,0) circle (\R) (-135:.75*\R) -- (45:.75*\R) (-45:.75*\R) -- (135:.75*\R);
+  }},
+  pics/Bout/.style={
+    code={
+      \def\R{0.12}
+      \draw[pic actions,line width=0.6,#1,fill=white] (0,0) circle (\R);
+      \fill[pic actions,#1] (0,0) circle (0.3*\R);
+  }},
+  pics/Bin/.default=Bcol,
+  pics/Bout/.default=Bcol,
+}
+\tikzstyle{measure}=[fill=white,midway,outer sep=2]
+%\newcommand\arrmark[1]{mark=at position #1 with {\arrow{latex}}}
+%\def\myarrmark#1{mark=at position #1 with {\arrow{latex}}}
+\contourlength{1.4pt}
+
+% RING SHADING
+\makeatletter
+\pgfdeclareradialshading[tikz@ball]{ring}{\pgfpoint{0cm}{0cm}}%
+{rgb(0cm)=(1,1,1);
+rgb(0.719cm)=(1,1,1);
+color(0.72cm)=(tikz@ball);
+rgb(0.9cm)=(1,1,1)}
+\tikzoption{ring color}{\pgfutil@colorlet{tikz@ball}{#1}\def\tikz@shading{ring}\tikz@addmode{\tikz@mode@shadetrue}}
+\makeatother
+
+
+
+
+
+
+\newcommand{\myvoltmeter}[2] 
+{  % #1 = name , #2 = rotation angle
+  \begin{scope}[transform shape,rotate=#2]
+  \draw[thick] (#1)node(){$\mathbf V$} circle (11pt);
+  \draw[rotate=45,-latex] (#1)  +(-17pt,0) --+(17pt,0);
+  \end{scope}
+}
